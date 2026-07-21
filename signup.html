@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create your account | Chalo Chale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --ink: #102a43; --orange: #ff7a18; --sunshine: #ffc542; --sea: #0c7490; }
+        * { box-sizing: border-box; }
+        body { min-height: 100vh; color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: #f5fbfc; }
+        .topbar { background: rgba(12, 37, 57, .96); backdrop-filter: blur(10px); }
+        .navbar-brand { letter-spacing: -.4px; }
+        .navbar-brand i { color: var(--sunshine); transform: rotate(-20deg); }
+        .nav-link { color: rgba(255,255,255,.78) !important; }
+        .nav-link:hover, .nav-link.active { color: var(--sunshine) !important; }
+        .nav-signin { color: #fff; text-decoration: none; font-weight: 600; }
+        .nav-signin:hover { color: var(--sunshine); }
+        .signup-shell { min-height: calc(100vh - 64px); padding: 48px 12px; background: radial-gradient(circle at 12% 12%, #d9f5f6 0, transparent 27%), radial-gradient(circle at 95% 88%, #ffe5bb 0, transparent 30%), #f8fcfd; }
+        .signup-card { overflow: hidden; border: 0; border-radius: 24px; box-shadow: 0 24px 60px rgba(16, 42, 67, .15); }
+        .welcome-panel { min-height: 100%; padding: 52px 44px; color: #fff; background: linear-gradient(145deg, rgba(5, 55, 78, .85), rgba(12, 116, 144, .76)), url('images/landscape-beach-sunset-with-beautiful-cloud-colorful-sunsets_1144977-288.avif') center/cover; }
+        .eyebrow { color: #ffe09b; font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+        .welcome-panel h1 { max-width: 310px; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 800; line-height: 1.1; }
+        .benefits { padding: 0; margin: 34px 0 0; list-style: none; }
+        .benefits li { display: flex; align-items: center; gap: 12px; margin: 16px 0; font-weight: 500; }
+        .benefits i { display: grid; width: 28px; height: 28px; place-items: center; color: #125b70; background: #fff; border-radius: 50%; font-size: .75rem; }
+        .form-panel { padding: 44px; background: #fff; }
+        .form-panel h2 { font-weight: 800; letter-spacing: -.04em; }
+        .form-label { margin-bottom: 7px; color: #29475f; font-size: .9rem; font-weight: 700; }
+        .input-group-text { width: 45px; justify-content: center; color: var(--sea); background: #f1f8f9; border: 1px solid #dbe8ea; border-right: 0; }
+        .form-control { min-height: 48px; border-color: #dbe8ea; font-size: .95rem; }
+        .form-control:focus { border-color: var(--sea); box-shadow: 0 0 0 .22rem rgba(12, 116, 144, .13); }
+        .form-control:focus + .password-toggle { border-color: var(--sea); }
+        .password-toggle { color: #658294; background: #fff; border: 1px solid #dbe8ea; border-left: 0; cursor: pointer; }
+        .password-toggle:hover { color: var(--sea); }
+        .form-check-input:checked { background-color: var(--sea); border-color: var(--sea); }
+        .form-check-label, .small-note { color: #658294; font-size: .83rem; }
+        .form-check-label a, .login-link { color: var(--sea); font-weight: 700; text-decoration: none; }
+        .form-check-label a:hover, .login-link:hover { text-decoration: underline; }
+        .create-btn { min-height: 50px; color: #fff; background: linear-gradient(100deg, var(--orange), #ff9d23); border: 0; border-radius: 11px; box-shadow: 0 10px 20px rgba(255, 122, 24, .25); font-weight: 800; transition: transform .2s, box-shadow .2s; }
+        .create-btn:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 14px 24px rgba(255, 122, 24, .31); }
+        @media (max-width: 767.98px) { .signup-shell { padding: 24px 12px; } .welcome-panel { min-height: 255px; padding: 36px 30px; } .benefits { display: none; } .form-panel { padding: 34px 25px; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark topbar py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="fa-solid fa-paper-plane me-2"></i>Chalo Chale</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto me-lg-4">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destination.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Booking.html">Bookings</a></li>
+                </ul>
+                <a class="nav-signin mt-3 mt-lg-0" href="login.html">Already a member? Sign in</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="signup-shell d-flex align-items-center">
+        <div class="container">
+            <div class="signup-card mx-auto" style="max-width: 980px;">
+                <div class="row g-0">
+                    <aside class="col-md-5">
+                        <div class="welcome-panel">
+                            <p class="eyebrow mb-3"><i class="fa-solid fa-compass me-2"></i>Start exploring</p>
+                            <h1>Your next great story starts here.</h1>
+                            <p class="mb-0 mt-3 text-white-50">Join fellow travellers and turn daydreams into itineraries.</p>
+                            <ul class="benefits">
+                                <li><i class="fa-solid fa-map-location-dot"></i> Save your favourite destinations</li>
+                                <li><i class="fa-solid fa-ticket"></i> Manage every booking in one place</li>
+                                <li><i class="fa-solid fa-heart"></i> Get trips picked just for you</li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <section class="col-md-7 form-panel">
+                        <div class="mb-4">
+                            <p class="eyebrow mb-2" style="color: var(--orange);">Create account</p>
+                            <h2 class="mb-2">Let’s get you travelling</h2>
+                            <p class="small-note mb-0">It only takes a minute to join Chalo Chale.</p>
+                        </div>
+                        <form action="#" method="post">
+                            <div class="mb-3">
+                                <label class="form-label" for="fullName">Full name</label>
+                                <div class="input-group"><span class="input-group-text"><i class="fa-regular fa-user"></i></span><input class="form-control" id="fullName" name="fullName" type="text" placeholder="e.g. Aisha Sharma" autocomplete="name" required></div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="email">Email address</label>
+                                <div class="input-group"><span class="input-group-text"><i class="fa-regular fa-envelope"></i></span><input class="form-control" id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required></div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="password">Create password</label>
+                                <div class="input-group"><span class="input-group-text"><i class="fa-solid fa-lock"></i></span><input class="form-control" id="password" name="password" type="password" placeholder="At least 8 characters" minlength="8" autocomplete="new-password" required><button class="password-toggle px-3" type="button" aria-label="Show password" data-toggle-password="password"><i class="fa-regular fa-eye"></i></button></div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label" for="confirmPassword">Confirm password</label>
+                                <div class="input-group"><span class="input-group-text"><i class="fa-solid fa-shield-halved"></i></span><input class="form-control" id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter your password" minlength="8" autocomplete="new-password" required><button class="password-toggle px-3" type="button" aria-label="Show password" data-toggle-password="confirmPassword"><i class="fa-regular fa-eye"></i></button></div>
+                            </div>
+                            <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="terms" required><label class="form-check-label" for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label></div>
+                            <button class="btn create-btn w-100" type="submit">Create my account <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                            <p class="small-note text-center mt-4 mb-0">Already have an account? <a class="login-link" href="login.html">Sign in instead</a></p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        document.querySelectorAll('[data-toggle-password]').forEach((button) => {
+            button.addEventListener('click', () => {
+                const input = document.getElementById(button.dataset.togglePassword);
+                const showing = input.type === 'text';
+                input.type = showing ? 'password' : 'text';
+                button.setAttribute('aria-label', showing ? 'Show password' : 'Hide password');
+                button.querySelector('i').className = showing ? 'fa-regular fa-eye' : 'fa-regular fa-eye-slash';
+            });
+        });
+    </script>
+</body>
+</html>

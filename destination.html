@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations | ChaloChale</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root { --ink:#132238; --orange:#ff6b35; --sand:#fff8f2; --teal:#087e8b; }
+    * { box-sizing:border-box; }
+    body { font-family:"Segoe UI",sans-serif; color:var(--ink); background:#fffdfb; }
+    .navbar { background:rgba(19,34,56,.94); backdrop-filter:blur(12px); }
+    .navbar-brand { font-size:1.45rem; letter-spacing:-.6px; }
+    .nav-link { color:rgba(255,255,255,.8)!important; font-weight:500; }
+    .nav-link.active,.nav-link:hover { color:#fff!important; }
+    .hero { min-height:590px; position:relative; display:grid; place-items:center; color:white; overflow:hidden; background:linear-gradient(90deg,rgba(7,18,33,.76),rgba(7,18,33,.18)),url('images/pexels-daniel-jurin-358265-1835718.jpg') center/cover; }
+    .hero::after { content:""; position:absolute; inset:auto -10% -110px; height:230px; background:#fffdfb; border-radius:50% 50% 0 0; }
+    .hero-content { position:relative; z-index:1; max-width:720px; text-align:center; padding:80px 20px 120px; }
+    .eyebrow { color:#ffd2bd; text-transform:uppercase; letter-spacing:3px; font-weight:700; font-size:.78rem; }
+    .hero h1 { font-size:clamp(2.7rem,7vw,5.6rem); font-weight:800; line-height:.95; letter-spacing:-3px; }
+    .search-panel { background:white; color:var(--ink); border-radius:18px; padding:10px; box-shadow:0 18px 45px rgba(4,15,30,.25); }
+    .search-panel input { border:0; box-shadow:none!important; padding:13px 16px; }
+    .btn-explore { background:var(--orange); color:white; border:0; border-radius:12px; font-weight:700; padding:13px 22px; }
+    .btn-explore:hover { background:#e65826; color:white; }
+    .section-kicker { color:var(--orange); letter-spacing:2px; font-size:.76rem; text-transform:uppercase; font-weight:800; }
+    .section-title { font-size:clamp(2rem,4vw,3.1rem); font-weight:800; letter-spacing:-1.5px; }
+    .destination-card { border:0; border-radius:20px; overflow:hidden; background:white; box-shadow:0 8px 28px rgba(19,34,56,.09); transition:.3s ease; height:100%; }
+    .destination-card:hover { transform:translateY(-8px); box-shadow:0 20px 35px rgba(19,34,56,.17); }
+    .card-image { height:245px; position:relative; overflow:hidden; }
+    .card-image img { width:100%; height:100%; object-fit:cover; transition:.5s ease; }
+    .destination-card:hover img { transform:scale(1.08); }
+    .card-tag { position:absolute; top:16px; left:16px; padding:7px 11px; border-radius:50px; background:rgba(255,255,255,.92); color:var(--ink); font-size:.76rem; font-weight:700; }
+    .rating { color:#f3a712; font-size:.9rem; }
+    .card-body { padding:22px; }
+    .card-title { font-size:1.35rem; font-weight:800; }
+    .destination-meta { color:#657284; font-size:.9rem; }
+    .explore-link { color:var(--teal); font-weight:800; text-decoration:none; }
+    .explore-link:hover { color:var(--orange); }
+    .feature-strip { background:var(--sand); border-radius:22px; }
+    .feature-icon { width:48px; height:48px; display:grid; place-items:center; border-radius:14px; background:#ffe2d4; color:var(--orange); }
+    .cta { background:linear-gradient(110deg,rgba(13,45,68,.91),rgba(8,126,139,.75)),url('images/landscape-beach-sunset-with-beautiful-cloud-colorful-sunsets_1144977-288.avif') center/cover; color:white; border-radius:25px; overflow:hidden; }
+    footer { background:var(--ink); color:rgba(255,255,255,.65); }
+    @media (max-width:576px) { .hero { min-height:540px; } .search-panel { border-radius:14px; } .search-panel .btn { width:100%; } }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand fw-bold" href="index.html"><i class="fa-solid fa-plane-departure me-2 text-warning"></i>ChaloChale</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="destination.html">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="Booking.html">Booking</a></li>
+        </ul>
+        <a href="login.html" class="btn btn-outline-light rounded-pill ms-lg-3 px-4">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <p class="eyebrow mb-3">India, your way</p>
+      <h1>Find a place<br>that feels like magic.</h1>
+      <p class="lead my-4">From royal forts to quiet coastlines, your next unforgettable story starts here.</p>
+      <form class="search-panel d-sm-flex gap-2 text-start" action="#destinations">
+        <label class="visually-hidden" for="destination-search">Search destinations</label>
+        <div class="d-flex align-items-center flex-grow-1"><i class="fa-solid fa-magnifying-glass ms-3 text-secondary"></i><input id="destination-search" class="form-control" type="search" placeholder="Where do you want to go?"></div>
+        <button class="btn btn-explore" type="submit">Explore <i class="fa-solid fa-arrow-right ms-1"></i></button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <section class="container py-5" id="destinations">
+      <div class="d-md-flex justify-content-between align-items-end mb-4">
+        <div><p class="section-kicker mb-2">Handpicked for you</p><h2 class="section-title mb-0">Popular destinations</h2></div>
+        <p class="text-secondary mb-0 mt-2">Six beautiful reasons to pack your bags.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4"><article class="destination-card"><div class="card-image"><img src="images/hawa-mahal-jaipur-rajasthan-city-1-hero.jpg" alt="Hawa Mahal in Jaipur"><span class="card-tag">Heritage</span></div><div class="card-body"><div class="d-flex justify-content-between"><h3 class="card-title">Jaipur</h3><span class="rating"><i class="fa-solid fa-star"></i> 4.9</span></div><p class="destination-meta"><i class="fa-solid fa-location-dot me-1"></i>Rajasthan · The Pink City</p><p>Palaces, bustling bazaars and timeless royal charm.</p><a class="explore-link" href="Booking.html">Plan a trip <i class="fa-solid fa-arrow-right ms-1"></i></a></div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="destination-card"><div class="card-image"><img src="images/india-gate-delhi-1-attr-hero.jpg" alt="India Gate in Delhi"><span class="card-tag">City break</span></div><div class="card-body"><div class="d-flex justify-content-between"><h3 class="card-title">Delhi</h3><span class="rating"><i class="fa-solid fa-star"></i> 4.7</span></div><p class="destination-meta"><i class="fa-solid fa-location-dot me-1"></i>Delhi · Heart of India</p><p>A lively mix of historic landmarks and modern culture.</p><a class="explore-link" href="Booking.html">Plan a trip <i class="fa-solid fa-arrow-right ms-1"></i></a></div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="destination-card"><div class="card-image"><img src="images/beach.1.jpg" alt="Sunny beach in Goa"><span class="card-tag">Beach escape</span></div><div class="card-body"><div class="d-flex justify-content-between"><h3 class="card-title">Goa</h3><span class="rating"><i class="fa-solid fa-star"></i> 4.8</span></div><p class="destination-meta"><i class="fa-solid fa-location-dot me-1"></i>Goa · Coastal paradise</p><p>Golden sands, sea breezes and sunsets worth staying for.</p><a class="explore-link" href="Booking.html">Plan a trip <i class="fa-solid fa-arrow-right ms-1"></i></a></div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="destination-card"><div class="card-image"><img src="images/premium_photo-1669748157617-a3a83cc8ea23.avif" alt="Scenic mountain landscape"><span class="card-tag">Mountains</span></div><div class="card-body"><div class="d-flex justify-content-between"><h3 class="card-title">Manali</h3><span class="rating"><i class="fa-solid fa-star"></i> 4.8</span></div><p class="destination-meta"><i class="fa-solid fa-location-dot me-1"></i>Himachal Pradesh</p><p>Fresh mountain air, pine forests and adventure trails.</p><a class="explore-link" href="Booking.html">Plan a trip <i class="fa-solid fa-arrow-right ms-1"></i></a></div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="destination-card"><div class="card-image"><img src="images/istockphoto-583809524-612x612.jpg" alt="Beautiful Kerala landscape"><span class="card-tag">Nature</span></div><div class="card-body"><div class="d-flex justify-content-between"><h3 class="card-title">Kerala</h3><span class="rating"><i class="fa-solid fa-star"></i> 4.9</span></div><p class="destination-meta"><i class="fa-solid fa-location-dot me-1"></i>Kerala · God's Own Country</p><p>Drift through serene backwaters and emerald tea hills.</p><a class="explore-link" href="Booking.html">Plan a trip <i class="fa-solid fa-arrow-right ms-1"></i></a></div></article></div>
+        <div class="col-md-6 col-lg-4"><article class="destination-card"><div class="card-image"><img src="images/images.jpg" alt="Indian cultural landmark"><span class="card-tag">Culture</span></div><div class="card-body"><div class="d-flex justify-content-between"><h3 class="card-title">Varanasi</h3><span class="rating"><i class="fa-solid fa-star"></i> 4.7</span></div><p class="destination-meta"><i class="fa-solid fa-location-dot me-1"></i>Uttar Pradesh · Sacred city</p><p>Watch ancient rituals unfold along the sacred Ganges.</p><a class="explore-link" href="Booking.html">Plan a trip <i class="fa-solid fa-arrow-right ms-1"></i></a></div></article></div>
+      </div>
+    </section>
+    <section class="container pb-5"><div class="feature-strip row g-0 p-4 p-md-5"><div class="col-md-4 d-flex gap-3 mb-4 mb-md-0"><div class="feature-icon"><i class="fa-solid fa-route"></i></div><div><strong>Curated routes</strong><p class="text-secondary mb-0 small">Travel plans that make every day count.</p></div></div><div class="col-md-4 d-flex gap-3 mb-4 mb-md-0"><div class="feature-icon"><i class="fa-solid fa-shield-heart"></i></div><div><strong>Travel with ease</strong><p class="text-secondary mb-0 small">Reliable stays and local recommendations.</p></div></div><div class="col-md-4 d-flex gap-3"><div class="feature-icon"><i class="fa-solid fa-headset"></i></div><div><strong>Here to help</strong><p class="text-secondary mb-0 small">Support whenever your adventure calls.</p></div></div></div></section>
+    <section class="container pb-5"><div class="cta text-center p-5"><p class="eyebrow">Ready when you are</p><h2 class="fw-bold display-6">Your next story is waiting.</h2><p class="mb-4">Choose a destination and let ChaloChale handle the details.</p><a href="Booking.html" class="btn btn-light rounded-pill px-4 fw-bold">Start planning</a></div></section>
+  </main>
+  <footer class="py-4 text-center"><small>© 2026 ChaloChale. Travel more, worry less.</small></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
